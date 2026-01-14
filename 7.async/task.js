@@ -15,8 +15,9 @@ class AlarmClock {
   }
 
   getCurrentFormattedTime() {
-    let currentDate = new Date()
-    return `${currentDate.getHours()}:${currentDate.getMinutes()}`
+    // let currentDate = new Date()
+    // return `${currentDate.getHours()}:${currentDate.getMinutes()}`
+    return (new Date()).toLocaleTimeString('ru-Ru', {hour: '2-digit', minute: '2-digit'})
   }
 
   start() {
